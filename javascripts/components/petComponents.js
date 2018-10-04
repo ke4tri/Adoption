@@ -7,12 +7,28 @@ const setCharacters = (newArray) => {
   pets = newArray;
   };
 
+const sortPeople = () => {
+  console.log('sortPeople() is working')
+
+};
+
+const sortEvents = () => {
+  const allButton = document.getElementById('All');
+  const catButton = document.getElementById('cat');
+  const dogButton = document.getElementById('dog');
+  const dinoButton = document.getElementById('dino');
+  allButton.addEventListener('click', sortPeople);
+  catButton.addEventListener('click', sortPeople);
+  dogButton.addEventListener('click', sortPeople);
+  dinoButton.addEventListener('click', sortPeople);
+};
+
   const detailsBuilder = () => {
     console.log('detailsbuilder')
     let domString = '';
      let i=0;
     for(i=0;i<pets.length;i++){
-       domString +=   `<div class="card  mb-3" style="width: 18rem;">`
+       domString +=   `<div class="card  mb-3 bg-light" style="width: 18rem;">`
        domString +=   `<div class="card-body ">`
        domString +=       `<h3 class="card-link text-center">${pets[i]["name"]}</h3>`
        domString +=   `</div>`
@@ -33,6 +49,4 @@ const setCharacters = (newArray) => {
   };
   
  
-
-
-export {setCharacters, detailsBuilder}
+export {setCharacters, detailsBuilder,sortPeople, sortEvents}
