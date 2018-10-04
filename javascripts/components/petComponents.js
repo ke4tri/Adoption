@@ -22,12 +22,14 @@ const setCharacters = (newArray) => {
        domString +=       `<p class="card-title text-center">${pets[i]["specialSkill"]}</p>`
        domString +=   `</div>`
        domString +=   `<div class="card-body ">`
-       domString +=       `<h5 class="card-link text-center ">${pets[i]["type"]}</h5>`
+       domString +=       `<h5 class="card-link text-center" id="${pets[i]["type"]}">${pets[i]["type"]}</h5>`
        domString +=   `</div>`
        domString +=   `</div>` 
     }
     printToDom(domString);
   //   closeButtonEvent();
+  //call function() here that will pull id from html and eddit css pending what it is
+    
   };
   
  
