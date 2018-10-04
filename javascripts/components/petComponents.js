@@ -7,7 +7,18 @@ const setCharacters = (newArray) => {
   pets = newArray;
   };
 
+  const getpetz = () => {
+    return pets
+  }
+
 const sortPeople = () => {
+  // const pet = e.target.id;
+  // if(pet === 'All'){
+  //       detailsBuilder();
+  // }else {
+  //   const filterPets = pets.filter(x => x.pet === pet);
+  //   detailsBuilder(filterPets);
+  // }
   console.log('sortPeople() is working')
 
 };
@@ -23,8 +34,29 @@ const sortEvents = () => {
   dinoButton.addEventListener('click', sortPeople);
 };
 
+
+// const detailsBuilder = (ArrayOfPets) => {
+//   let domString = '';
+//    ArrayOfPets.forEach((pets) => {
+//      domString +=   `<div class="card  mb-3 bg-light" style="width: 18rem;">`
+//      domString +=   `<div class="card-body ">`
+//      domString +=       `<h3 class="card-link text-center">${pets[i]["name"]}</h3>`
+//      domString +=   `</div>`
+//      domString +=     `<img class="card-img-top" src="${pets[i]["imageUrl"]}">`
+//      domString +=   `<div class="card-body ">`
+//      domString +=       `<h5 class="card-title text-center">${pets[i]["color"]}</h5>`
+//      domString +=       `<p class="card-title text-center">${pets[i]["specialSkill"]}</p>`
+//      domString +=   `</div>`
+//      domString +=   `<div class="card-body ">`
+//      domString +=       `<h5 class="card-link text-center" id="${pets[i]["type"]}">${pets[i]["type"]}</h5>`
+//      domString +=   `</div>`
+//      domString +=   `</div>` 
+//   });
+//   printToDom(domString);
+//   sortEvents();
+// };
+
   const detailsBuilder = () => {
-    console.log('detailsbuilder')
     let domString = '';
      let i=0;
     for(i=0;i<pets.length;i++){
@@ -32,7 +64,7 @@ const sortEvents = () => {
        domString +=   `<div class="card-body ">`
        domString +=       `<h3 class="card-link text-center">${pets[i]["name"]}</h3>`
        domString +=   `</div>`
-       domString +=   `<img class="card-img-top" src="${pets[i]["imageUrl"]}">`
+       domString +=     `<img class="card-img-top" src="${pets[i]["imageUrl"]}">`
        domString +=   `<div class="card-body ">`
        domString +=       `<h5 class="card-title text-center">${pets[i]["color"]}</h5>`
        domString +=       `<p class="card-title text-center">${pets[i]["specialSkill"]}</p>`
@@ -43,10 +75,8 @@ const sortEvents = () => {
        domString +=   `</div>` 
     }
     printToDom(domString);
-  //   closeButtonEvent();
-  //call function() here that will pull id from html and eddit css pending what it is
-    
+    sortEvents();
   };
   
  
-export {setCharacters, detailsBuilder,sortPeople, sortEvents}
+export {setCharacters, detailsBuilder,sortPeople, sortEvents, getpetz}
