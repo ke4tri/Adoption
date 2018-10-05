@@ -1,10 +1,11 @@
-import {setCharacters, detailsBuilder} from '../components/petComponents.js'
+import {setCharacters, detailsBuilder,getpetz} from '../components/petComponents.js'
 
 function executeThisCodeAfterFileLoaded () {
     const data = JSON.parse(this.responseText); 
     setCharacters(data.pets);
-    console.log('request', this); 
-    detailsBuilder();
+    console.log('request', this);
+     
+    detailsBuilder(getpetz());
 }
 
 function executeThisCodeIfXhrFails () {
