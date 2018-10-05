@@ -12,18 +12,15 @@ const setCharacters = (newArray) => {
   }
 
 
-
-
-const sortPeople = () => {
+const sortPeople = (e) => {
   const pet = e.target.id;
   if(pet === 'All'){
         detailsBuilder(pets);
   }else {
-    const filterPeeps = pets.filter(x => x.pet === pet);
+    const filterPeeps = pets.filter(x => x.type === pet);
     detailsBuilder(filterPeeps);
   }
   console.log('sortPeople() is working')
-
 };
 
 const sortEvents = () => {
@@ -41,7 +38,7 @@ const sortEvents = () => {
 
 const detailsBuilder = (characrtersArray) => {
   let domString = '';
-  characrtersArray.forEach((character) => {
+  characrtersArray.forEach((character) => { //this turns pets/getpetz into a new array character
      domString +=   `<div class="card  mb-3 bg-light" style="width: 18rem;">`
      domString +=   `<div class="card-body ">`
      domString +=       `<h3 class="card-link text-center">${character.name}</h3>`
@@ -59,6 +56,8 @@ const detailsBuilder = (characrtersArray) => {
   printToDom(domString);
   sortEvents();
 };
+
+
 
   // const detailsBuilder = () => {
   //   let domString = '';
