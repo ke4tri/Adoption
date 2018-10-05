@@ -3,8 +3,6 @@ import {setCharacters, detailsBuilder,getpetz} from '../components/petComponents
 function executeThisCodeAfterFileLoaded () {
     const data = JSON.parse(this.responseText); 
     setCharacters(data.pets);
-    console.log('request', this);
-     
     detailsBuilder(getpetz());
 }
 
@@ -19,7 +17,6 @@ const getPets = () => {
     myRequest.open('GET', './db/pets.json'); 
     myRequest.send();
 };
-
 
 export {getPets};
 

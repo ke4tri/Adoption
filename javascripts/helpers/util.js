@@ -3,10 +3,4 @@ const printToDom = (stringToPrint) => {
     selectedDiv.innerHTML = stringToPrint;
 };
 
-
-
-// let petColor = () => {
-    
-// };
-
 export {printToDom};

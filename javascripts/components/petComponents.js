@@ -7,22 +7,23 @@ const setCharacters = (newArray) => {
   pets = newArray;
   };
 
-  const getpetz = () => {
-    return pets
-  }
+const getpetz = () => {
+  return pets
+}
 
-
+// Filter //
 const sortPeople = (e) => {
   const pet = e.target.id;
   if(pet === 'All'){
         detailsBuilder(pets);
   }else {
-    const filterPeeps = pets.filter(x => x.type === pet);
+    const filterPeeps = pets.filter(x => x.type === pet);  
     detailsBuilder(filterPeeps);
   }
   console.log('sortPeople() is working')
 };
 
+// Listener for each button to activate Filter above  //
 const sortEvents = () => {
   const allButton = document.getElementById('All');
   const catButton = document.getElementById('cat');
@@ -35,7 +36,7 @@ const sortEvents = () => {
   console.log("sortEvents is working");
 };
 
-
+//  String builder using 'forEach' instead of itterating like commented out code bottom of page //
 const detailsBuilder = (characrtersArray) => {
   let domString = '';
   characrtersArray.forEach((character) => { //this turns pets/getpetz into a new array character
@@ -57,7 +58,7 @@ const detailsBuilder = (characrtersArray) => {
   sortEvents();
 };
 
-
+export {setCharacters, detailsBuilder,sortPeople, sortEvents, getpetz}
 
   // const detailsBuilder = () => {
   //   let domString = '';
@@ -82,4 +83,4 @@ const detailsBuilder = (characrtersArray) => {
   // };
   
  
-export {setCharacters, detailsBuilder,sortPeople, sortEvents, getpetz}
+
