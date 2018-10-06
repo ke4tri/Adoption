@@ -1,5 +1,13 @@
 # Adoption Website
 
+## Screen Shot
+
+![MockUp](https://github.com/ke4tri/Adoption/blob/master/PetsScreenShot.JPG)
+
+
+
+
+
 ## Setup
 
 **Your project should have (at least):**
